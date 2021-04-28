@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  target-branch: dev-dependencies
+  assignees:
+  - koconder
+  ignore:
+  - dependency-name: phpunit/phpunit
+    versions:
+    - "< 7.6, >= 7.5.a"
